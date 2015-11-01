@@ -1,23 +1,19 @@
 html
   head
     title=title
-
+    link(rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css' integrity='sha512-dTfge/zgoMYpP7QbHy4gWMEGsbsdZeCXz7irItjcC3sPUFtf0kuFbDz/ixG7ArTxmDjLXDmezHubeNikyKGVyQ==' crossorigin='anonymous')
+    link(rel='stylesheet' href='/index.css')
   body
-    div.container
-      div.jumbotron
-        h1 Hello!
+    .container
+      div(class='jumbotron')
+        h1 Weapon shuffle
 
-        if user
-          p Welcome, #{user.fullName}
-          p
-            a.small(href='profile') Edit my profile
-          a.btn.btn-primary(href='/loguoug') Logout
+        form(class='navbar-form navbar-left' role='search')
+          div(class='form-group')
+            input(type='text' class='form-control' placeholder='Your room name')
+          button(type='submit' class='btn btn-default') Create or Join
 
-        else
-          p Welcome to my app, ready to get started?
-          p
-            a.btn.btn-primary(href='/login') Login now
-          p
-            span.small Don't have an account?
-            span &nbsp;
-            a.small(href='/register') Register now
+      div#main-content
+    script(type='text/javascript' src='http://code.jquery.com/jquery-2.0.3.min.js')
+    script(src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js' integrity='sha512-K1qjQ+NcF2TYO/eI3M6v8EiNYZfA95pQumfvcVrTHtwQVDG+aHRqLi/ETn2uB+1JqwYqVG3LIvdm9lj6imS/pQ==' crossorigin='anonymous')
+    script(type='text/javascript' src='http://localhost:8080/app.js')

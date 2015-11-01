@@ -24,14 +24,14 @@ module.exports = {
     colors: true
   },
   entry: {
-    book: './src/index.js',
+    app: path.resolve(__dirname, './src'),
   },
   output: {
-    path: './public/dest',
+    path: path.resolve(__dirname, './public/dest'),
     filename: '[name].js'
   },
   resolve: {
-    root: [path.join(__dirname, 'node_modules')],
+    root: [path.resolve(__dirname, 'node_modules')],
     extensions: ['', '.js', '.coffee', '.jsx'],
     alias: {
       underscore: 'lodash'
